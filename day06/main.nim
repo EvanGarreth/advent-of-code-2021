@@ -10,7 +10,7 @@ when is_main_module:
   for state in startingStates:
     inc states[state]
 
-  # pt2 goes to 80 days. pt2 256
+  # pt1 goes to 80 days. pt2 256
   while current < 256:
     var prev = 0
     for state in countdown(len(states)-1, 0):
@@ -29,4 +29,4 @@ when is_main_module:
     if current == 80:
       echo fmt"pt1 fish after 80 iterations: {sum(states)}"
 
-  echo fmt"pt2 fish after 80 iterations: {sum(states)}"
+  echo fmt"pt2 fish after 256 iterations: {sum(states)}"
